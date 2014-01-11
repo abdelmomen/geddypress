@@ -16,24 +16,26 @@
  *
 */
 
+var port = process.env.PORT || 5000;
+
 var config = {
   detailedErrors: false
-, hostname: null
-, port: 4000
+
 , model: {
     defaultAdapter: 'mongo'
   }
 , db: {
     mongo: {
-      username: null
-    , dbname: 'production'
+      username: 'tester'
+    , dbname: 'winedb'
     , prefix: null
-    , password: null
-    , host: 'localhost'
-    , port: 27017
+    , password: 'hoster'
+    , host: 'paulo.mongohq.com'
+    , port: 10087
     }
   }
-
+, port: port
+, baseUrl : ""
 /* // Using Postgres as the default, with only a Postgres DB
 , model: {
     defaultAdapter: 'postgres'
